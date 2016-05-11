@@ -16,7 +16,7 @@ bipartite_list <- data.frame(
   student = c(1, 2, 1, 3, 2, 4),
   stringsAsFactors = FALSE)
 
-project_table(bipartite_list, joining_col = "club", projected_col = "student")
+project_table(bipartite_list, joining_col = "club")
 #>   from to weight
 #> 1    1  2      2
 #> 2    3  4      1
