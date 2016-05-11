@@ -17,7 +17,10 @@ A data.frame edgelist with the columns \code{from} and \code{to} each
   containing IDs from \code{joining_col}, along with a \code{weight} column.
 }
 \description{
-Project a bimodal edge list into a unimodal edge list
+This function takes a table with an edge list, where the first two columns
+describe the source and target vertices/nodes of multiple edges. It will
+return an edge list of a projected network with the \code{joining_col}
+vertices removed.
 }
 \examples{
 bipartite_list <- data.frame(

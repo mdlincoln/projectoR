@@ -1,5 +1,10 @@
 #' Project a bimodal edge list into a unimodal edge list
 #'
+#' This function takes a table with an edge list, where the first two columns
+#' describe the source and target vertices/nodes of multiple edges. It will
+#' return an edge list of a projected network with the \code{joining_col}
+#' vertices removed.
+#'
 #' @param df A data.frame with the oribinal bimodal edge list
 #' @param joining_col The quoted name of the column with the node ids that will
 #'   be removed from the projected graph
