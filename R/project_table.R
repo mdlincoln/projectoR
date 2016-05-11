@@ -23,10 +23,14 @@ project_table <- function(df, joining_col) {
   # Create a bipartite graph
   bg <- igraph::graph_from_data_frame(df, directed = FALSE)
 
-  # Set the vertex types
+  # Set the vertex types by checking if a given vertex name in the bipartite
+  # graph is in the list of vertex names in joining_col. Type TRUE means it is a
+  # vertex that we want to project OUT of the graph; type FALSE means its a
+  # vertex we want to keep in the resulting projection.
   igraph::V(bg)$type <- igraph::V(bg)$name %in% df[[joining_col]]
 
-  # Project into a unipartite graph
+  # Project into a unipartite graph. Given the way that we encoded the vertex
+  # types above, we want the FALSE bipartite projection
   ug <- igraph::bipartite_projection(bg, which = FALSE)
 
   # Return the new edge list
