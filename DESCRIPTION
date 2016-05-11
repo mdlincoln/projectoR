@@ -1,0 +1,9 @@
+Package: projectoR
+Type: Package
+Title: Project a Bimodal Edgelist into a Unimodal One
+Version: 0.1.0
+Authors@R: person("Matthew", "Lincoln", email = "matthew.d.lincoln@gmail.com",
+  role = c("aut", "cre"))
+Description: Does what it says in the title.
+License: MIT + file LICENSE
+LazyData: TRUE
