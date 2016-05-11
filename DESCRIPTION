@@ -7,3 +7,6 @@ Authors@R: person("Matthew", "Lincoln", email = "matthew.d.lincoln@gmail.com",
 Description: Does what it says in the title.
 License: MIT + file LICENSE
 LazyData: TRUE
+Imports:
+    igraph
+RoxygenNote: 5.0.1
