@@ -27,6 +27,10 @@ project_table(bipartite_list, joining_col = "club")
 #>   from to weight
 #> 1    1  2      2
 #> 2    3  4      1
+
+project_table(bipartite_list, joining_col = "student")
+#>     from   to weight
+#> 1 Karate Book      2
 ```
 
 ---
