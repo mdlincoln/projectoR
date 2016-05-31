@@ -16,6 +16,8 @@ return an edge list of a projected network with the `joining_col`
 vertices removed.
 
 ```r
+library(projectoR)
+
 bipartite_list <- data.frame(
   club = c("Karate", "Karate", "Book", "Chess", "Book", "Chess"),
   student = c(1, 2, 1, 3, 2, 4),
