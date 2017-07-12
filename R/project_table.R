@@ -26,7 +26,7 @@
 project_table <- function(df, joining_col) {
 
   # Create a bipartite graph
-  bg <- igraph::graph_from_data_frame(df, directed = FALSE)
+  bg <- igraph::graph.data.frame(df, directed = FALSE)
 
   # Set the vertex types by checking if a given vertex name in the bipartite
   # graph is in the list of vertex names in joining_col. Type TRUE means it is a
@@ -36,8 +36,8 @@ project_table <- function(df, joining_col) {
 
   # Project into a unipartite graph. Given the way that we encoded the vertex
   # types above, we want the FALSE bipartite projection
-  ug <- igraph::bipartite_projection(bg, which = FALSE)
+  ug <- igraph::bipartite.projection(bg, which = FALSE)
 
   # Return the new edge list
-  igraph::as_data_frame(ug, what = "edges")
+  igraph::get.data.frame(ug, what = "edges")
 }
